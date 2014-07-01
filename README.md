@@ -1,25 +1,25 @@
-docker-tor
-==========
+# docker-tor
+---
 
 TOR relay in docker.
 
 No exits allowed. No setuid binaries in image. No priviledged processes.
 
 
-Build
------
+### Build
+---
 	docker build -t="janfrode/trafficserver" .
 
-Run
------
+### Run
+---
 	docker run -p 9001:9001 -t -i janfrode/tor
 
 and if you want to run a second instance on the same server:
 
 	docker run -p 9002:9002 -t -i janfrode/tor /usr/bin/tor -f /etc/tor/torrc --ORPort 9002
 
-systemd.service
-----------------
+### systemd.service
+---
 Create /etc/systemd/system/docker-tor.service containing:
 
 	[Unit]
