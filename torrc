@@ -1,0 +1,5 @@
+DataDirectory /var/lib/tor
+User toranon
+Log notice stdout
+ExitPolicy reject *:*
+ORPort 9001
