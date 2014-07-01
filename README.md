@@ -12,11 +12,11 @@ Build
 
 Run
 -----
-	docker run -p 9001:9001  -t -i janfrode/tor
+	docker run -p 9001:9001 -t -i janfrode/tor
 
 and if you want to run a second instance on the same server:
 
-	docker run --rm=true -p 9002:9002 janfrode/tor /usr/bin/tor -f /etc/tor/torrc --ORPort 9002
+	docker run -p 9002:9002 -t -i janfrode/tor /usr/bin/tor -f /etc/tor/torrc --ORPort 9002
 
 systemd.service
 ----------------
