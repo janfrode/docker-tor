@@ -46,7 +46,7 @@ To keep the tor relay's data persistent, one can run f.ex.:
 
 	semanage fcontext -a -t docker_var_lib_t "/srv/docker(/.*)?"
 	mkdir -p /srv/docker/tor/var_lib_docker
-	chown 999 /srv/docker/tor/var_lib_docker
+	chown 9999 /srv/docker/tor/var_lib_docker
 	cat <<EOF > /srv/docker/tor/torrc
 	DataDirectory /var/lib/tor
 	User toranon
